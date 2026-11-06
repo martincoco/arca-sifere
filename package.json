@@ -1,0 +1,12 @@
+{
+  "name": "arca-sifere",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "explorar": "node explorar.js",
+    "presentar": "node presentar.js"
+  },
+  "dependencies": {
+    "playwright": "^1.64.1"
+  }
+}

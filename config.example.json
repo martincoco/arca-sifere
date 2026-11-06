@@ -1,0 +1,10 @@
+{
+  "perfil": "martin",
+  "cuitContribuyente": "27000000000",
+  "actividad": "620200",
+  "campoMonto": "montoregimenesesp",
+  "jurisdicciones": [
+    { "codigo": "901", "nombre": "CABA", "porcentaje": 20, "tratamientoFiscal": "1", "alicuota": "0.00", "ingresos": "exentos" },
+    { "codigo": "902", "nombre": "BUENOS AIRES", "porcentaje": 80, "tratamientoFiscal": "0", "alicuota": "3.50", "ingresos": "gravados" }
+  ]
+}
