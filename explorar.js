@@ -24,7 +24,9 @@ const cuit = leerKeychain(perfil, 'cuit') ?? (await ask('CUIT: '));
 const clave = leerKeychain(perfil, 'clave') ?? (await ask('Clave fiscal: ', { hidden: true }));
 
 mkdirSync(DIR, { recursive: true });
-const browser = await chromium.launch({ headless: false });
+// the installed Google Chrome (kept up to date by its own updater) rather than Playwright's pinned Chromium build,
+// with Chrome's OS sandbox on (Playwright disables it by default)
+const browser = await chromium.launch({ channel: 'chrome', chromiumSandbox: true, headless: false });
 const context = await browser.newContext({ acceptDownloads: true });
 let page = await context.newPage();
 let n = 0;

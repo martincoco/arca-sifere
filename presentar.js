@@ -41,7 +41,9 @@ const bases = repartir(monto, config.jurisdicciones);
 console.log(`DDJJ ${periodoLabel} para CUIT ${config.cuitContribuyente}: monto ${pesos(monto)}`);
 config.jurisdicciones.forEach((j, i) => console.log(`  ${j.codigo} ${j.nombre}: ${j.porcentaje}% = ${pesos(bases[i])}`));
 
-const browser = await chromium.launch({ headless: false, slowMo: 100 });
+// the installed Google Chrome (kept up to date by its own updater) rather than Playwright's pinned Chromium build,
+// with Chrome's OS sandbox on (Playwright disables it by default)
+const browser = await chromium.launch({ channel: 'chrome', chromiumSandbox: true, headless: false, slowMo: 100 });
 const context = await browser.newContext();
 let page = await context.newPage();
 

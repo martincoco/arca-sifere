@@ -4,7 +4,7 @@ Automation for the monthly IIBB Convenio Multilateral DDJJ in SIFERE Web. Work i
 
 ## Setup
 
-    npm install && npx playwright install chromium
+    npm install   # uses your installed Google Chrome, sandboxed; no separate browser download
 
 Credentials come from the macOS Keychain profiles shared with the other ARCA tools (`arca-<perfil>`, see
 `arca-facturador-colegio`'s `npm run credenciales`).
